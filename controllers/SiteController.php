@@ -40,9 +40,9 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionContact()
+    public function actionPrice()
     {
-        return $this->render('contact');
+        return $this->render('price');
     }
 
     /**
@@ -58,6 +58,11 @@ class SiteController extends Controller
     public function  actionTeacher()
     {
         return $this->render('teacher');
+
+    }
+    public  function actionGallery()
+    {
+        return $this->render('gallery');
 
     }
 }
