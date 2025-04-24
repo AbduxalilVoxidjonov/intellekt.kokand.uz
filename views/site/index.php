@@ -293,6 +293,122 @@ $this->registerCss("
   }
 }
 
+/* Price Section */
+#price-school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* To'liq ekran bo'yicha markazlash */
+    background-color: #f7f7f7;
+    flex-wrap: wrap;  /* Responsivlik uchun */
+}
+
+/* Title Section */
+.header-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-container h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Container for price cards */
+.container-price {
+    width: 460px;
+    padding: 40px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.container-price:hover {
+    transform: scale(1.05);  /* Hover effekti */
+}
+
+.container-price .title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.container-price .price {
+    color: #FF6B6B;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin: 15px 0;
+}
+
+.container-price span {
+    font-size: 1.2rem;
+}
+
+.container-price .description {
+    color: #3b3b3b;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.container-price .offer {
+    display: block;
+    color: #555;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.subscribe-button {
+    display: inline-block;
+    padding: 15px 0;
+    background-color: #FF6B6B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    width: 100%;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background: #ff4d4d;
+}
+
+.ribbon-wrap {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    pointer-events: none;
+}
+
+.ribbon {
+    width: 230px;
+    font-size: 0.918rem;
+    text-align: center;
+    padding: 8px 0;
+    background: #FF6B6B;
+    color: #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -17px;
+    top: 29%;
+}
+
+
+");
+
+$this->registerJs("
+
 
 ");
 ?>
@@ -381,6 +497,33 @@ $this->registerCss("
             </div>
         </div>
     </section>
+
+    <div class="header-container">
+        <h1>Maktabimiz narxlari</h1>
+    </div>
+    <section id="price-school" class="price-section">
+        <div class="container-price">
+            <h2 class="title">Bir oylik<br>to'lov</h2>
+            <h3 class="price">2.000.000 so'm<span>/oy</span></h3>
+            <p class="description">Bu yerda maktabda nima uchun bunchalik ko'p to'lov bo'lishi haqida</p>
+            <b class="offer">To'lovlar har oyning 10 sanasigacha</b>
+            <a class="subscribe-button" href="#">Ma'lumot olish</a>
+        </div>
+
+        <div class="container-price">
+            <h2 class="title">Uch oylik<br>to'lov</h2>
+            <h3 class="price">5.200.000 so'm<span>/3oy</span></h3>
+            <p class="description">Bu yerda maktabda nima uchun bunchalik ko'p to'lov bo'lishi haqida</p>
+            <b class="offer">To'lovlar har oyning 10 sanasigacha</b>
+            <a class="subscribe-button" href="#">Ma'lumot olish</a>
+            <div class="ribbon-wrap">
+                <div class="ribbon">Maxsus taklif!</div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
 
 
 

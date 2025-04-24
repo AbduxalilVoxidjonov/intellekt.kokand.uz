@@ -51,7 +51,7 @@ $this->title = "Intellekt Kokand";
         'items' => [
             ['label' => 'Nima uchun biz?', 'url' => ['#why_us']],
             ['label' => 'Maktab haqida', 'url' => ['#about_school']],
-            ['label' => 'Narxlar', 'url' => ['/site/price']],
+            ['label' => 'Narxlar', 'url' => ['#price-school']],
             ['label' => 'Galareya', 'url' => ['/site/gallery']],
             ['label' => 'Teacher', 'url' => ['/site/teacher']],
         ],
