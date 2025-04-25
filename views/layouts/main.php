@@ -36,29 +36,36 @@ $this->title = "Intellekt Kokand";
 <header id="header">
     <?php
     NavBar::begin([
-        'brandLabel' => Html::img('@web/assets/img/logos.png', [
-            'alt' => 'Intellekt Kokand',
-            'width' => '120px',
+        'brandLabel' => Html::img('@web/images/logo-dark-transparent.png', [
+            'alt' => Yii::$app->name,
+            'style' => 'height: 60px;',
         ]),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm px-4',
+            'class' => 'navbar navbar-expand-lg navbar-light bg-white fixed-top',
         ],
     ]);
 
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav mx-auto gap-2 fs-5'],
+        'options' => ['class' => 'navbar-nav ms-auto'],
         'items' => [
             ['label' => 'Nima uchun biz?', 'url' => ['#why_us']],
-            ['label' => 'Maktab haqida', 'url' => ['#about_school']],
-            ['label' => 'Narxlar', 'url' => ['#price-school']],
-            ['label' => 'Galareya', 'url' => ['/site/gallery']],
-            ['label' => 'Teacher', 'url' => ['/site/teacher']],
+            ['label' => 'Maktab haqida', 'url' => ['#why_school']],
+            [
+                'label' => 'Gallery',
+                'items' => [
+                    ['label' => "Maktab hayoti", 'url' => ['#about_school']],
+                    ['label' => "O'quvchilarimiz yutuqlari", 'url' => ['#results']],
+                ],
+            ],
+            ['label' => 'Narxlar', 'url' => ['#price']],
+            ['label' => "O'qituvchilar", 'url' => ['#']],
+            ['label' => 'Bog\'lanish', 'url' => ['#contact']],
         ],
     ]);
     echo Html::a(
         '<img src="' . Yii::getAlias('@web/assets/img/telegram.png') . '" alt="Icon" width="30" height="30" />',
-        ['/site/notifications'],
+        ['#telegram'],
     );
 
     echo Html::a('Ariza yuborish uchun', ['/site/login'], [
